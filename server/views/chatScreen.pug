@@ -1,0 +1,12 @@
+extends layout
+
+block content
+	ul#messages
+
+	form(action="")
+		input(id="m", autocomplete="off")
+		button Send
+
+	script(type="text/javascript", src="/socket.io/socket.io.js")
+	script(src="https://code.jquery.com/jquery-1.11.1.js")
+	script(type="text/javascript", src="/scripts/bundle.js")
