@@ -1,9 +1,8 @@
 import express from 'express';
-import controller from '../controllers/controller';
+import chatController from '../controllers/chatController';
 
 const router = express.Router();
 
-router.get('/', controller.homePage);
+router.get('/', chatController.homePage);
 
-// module.exports = router;
 export default router;
