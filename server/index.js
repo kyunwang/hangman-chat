@@ -2,24 +2,58 @@ require('dotenv').config({ path: './vars.env' });
 
 import app from './app';
 
-const server = app.listen(process.env.PORT, function() {
+const server = app.listen(process.env.PORT, function () {
 	console.log('Listening to port: ', process.env.PORT);
 });
 
 
 
+
 const io = require('socket.io').listen(server);
 
-io.on('connection', function(socket){
+
+
+io.on('connection', function (socket) {
+	const testWord = 'wonderful';
+
 	console.log('a user connected');
-	socket.on('disconnect', function(){
-	  console.log('user disconnected');
+
+	// Happens if the user leaves the chat / or disconnects
+	socket.on('disconnect', function () {
+		console.log('user disconnected');
 	});
 
-	socket.on('chat message', function(msg){
-		io.emit('chat message', msg);
-	});
- });
-	 
+	// When a user posts a new message
+	socket.on('new message', checkHangman);
+});
 
- io.emit('some event', { for: 'everyone' });
+
+function checkHangman(msg) {
+	if (msg.startsWith('/hangman', 0)) {
+		return checkType(msg);;
+	}
+	
+	io.emit('new message', msg);
+}
+
+function checkType(msg) {
+	const message = msg.split(' ');
+
+	if (message.length > 1) {
+		const firstWord = message[1].toLowerCase();
+		
+		if (firstWord === 'word' && message.length > 2) {
+			const word = message[2];
+			io.emit('new message', word);
+		} else {
+			const letter = message[1][0];
+			io.emit('new message', letter);
+		}
+		
+		return;
+	}
+
+
+	// Give a error saying that a word has to be passed in 
+	return;
+}
