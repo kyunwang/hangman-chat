@@ -37,15 +37,22 @@ const $ = h.$;
 
 	const chatSockets = {
 		init: function() {
+			socket.emit('get word');
+			
 			socket.on('new message', function (msg) {
 				chat.addMessage(msg);
 			});
-			
-			
+
 		}
 	}
 
-	const hangmanSocket = {}
+	const hangmanSocket = {
+		init: function() {
+			socket.on('get word', function(word) {
+				console.log(word);
+			})
+		}
+	}
 
 	chat.init();
 })()

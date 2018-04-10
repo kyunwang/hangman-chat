@@ -2,7 +2,7 @@ extends layout
 include mixins/_hangmanWords
 
 block content
-	+hangmanWords()
+	+hangmanWords(hmWord)
 	ul#messages
 
 	form(id="chat-form", action="")
