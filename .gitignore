@@ -57,3 +57,11 @@ typings/
 # dotenv environment variables file
 .env
 
+
+
+
+
+# Added
+
+## Because only the .scss is needed and .css is for production
+main.css
