@@ -1,5 +1,5 @@
 {
-	"name": "simple",
+	"name": "hangman-chat",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
@@ -14,12 +14,15 @@
 		"body-parser": "^1.18.2",
 		"dotenv": "^5.0.1",
 		"express": "^4.16.3",
-		"pug": "^2.0.3"
+		"pug": "^2.0.3",
+		"socket.io": "^2.1.0"
 	},
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-preset-env": "^1.6.1",
-		"nodemon": "^1.17.3"
+		"browserify": "^16.1.1",
+		"nodemon": "^1.17.3",
+		"watchify": "^3.11.0"
 	},
 	"babel": {
 		"presets": [
