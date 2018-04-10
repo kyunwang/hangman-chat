@@ -5,9 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "nodemon --exec babel-node ./server/index.js",
-		"watch": "watchify src/index.js --outfile public/scripts/bundle.js & npm start & npm run watch:css",
+		"watch": "watchify src/scripts/index.js --outfile public/scripts/bundle.js & npm run watch:css & npm start",
 		"watch:css": "node-sass --watch src/styles --output public/",
-		"build": "browserify src/index.js > dist/bundle.js && uglifyjs dist/bundle.js --compress --output dist/bundle.js",
+		"build": "browserify src/scripts/index.js > dist/bundle.js && uglifyjs dist/bundle.js --compress --output dist/bundle.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
