@@ -7,6 +7,7 @@ const server = app.listen(process.env.PORT, function () {
 });
 
 
+const testWord = 'wonderful';
 
 
 const io = require('socket.io').listen(server);
@@ -14,9 +15,6 @@ const io = require('socket.io').listen(server);
 
 
 io.on('connection', function (socket) {
-	const testWord = 'wonderful';
-
-	console.log('a user connected');
 
 	// Happens if the user leaves the chat / or disconnects
 	socket.on('disconnect', function () {
@@ -25,6 +23,8 @@ io.on('connection', function (socket) {
 
 	// When a user posts a new message
 	socket.on('new message', checkHangman);
+
+	socket.on('get word', getWord)
 });
 
 
@@ -53,7 +53,10 @@ function checkType(msg) {
 		return;
 	}
 
-
 	// Give a error saying that a word has to be passed in 
 	return;
+}
+
+function getWord() {
+	io.emit('get word', testWord);
 }

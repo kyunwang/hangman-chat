@@ -43,3 +43,14 @@ form button {
 #messages li:nth-child(odd) {
     background: #eee;
 }
+
+/*==========================
+=== The word to guess styling
+===========================*/
+
+.word--con {
+	display: flex;
+	p {
+		font-size: 1.2em;
+	}
+}
