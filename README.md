@@ -6,8 +6,8 @@ A simple chat with hangman where you can play hangman in with others.
 # Table of Content
 - [Getting started](#getting-started)
 - [Features](#features)
-- [What's used](#What's-used)
-- [To Do](#To-Do)
+- [What's used](#what's-used)
+- [To Do](#to-do)
 
 # Getting started
 Change the branch to hangman ;)
