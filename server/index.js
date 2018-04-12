@@ -7,6 +7,7 @@ const server = app.listen(process.env.PORT, function () {
 });
 
 
+const testWord = 'wonderful';
 
 
 const io = require('socket.io').listen(server);
@@ -14,7 +15,6 @@ const io = require('socket.io').listen(server);
 
 
 io.on('connection', function (socket) {
-	const testWord = 'wonderful';
 
 	// Happens if the user leaves the chat / or disconnects
 	socket.on('disconnect', function () {
@@ -58,5 +58,5 @@ function checkType(msg) {
 }
 
 function getWord() {
-	io.emit('wonderful');
+	io.emit('get word', testWord);
 }
