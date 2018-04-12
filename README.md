@@ -19,7 +19,7 @@ Here is how to get started:
 
 # Features
 * socket.io is being used to make the app realtime.  
-You can now use the app to talk with eachother and send messages.  
+You can now use the app to talk with each other and send messages.  
 In this case to play hangman!
 
 * Using pug as templating render engine to communicate with the browser.
