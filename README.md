@@ -16,7 +16,16 @@ Here is how to get started:
 4. Go to **localhost:3100** and you are ready to go.
 
 ## Features
+* socket.io is beeing used to make the app realtime.  
+You can now use the app to  talk with eachother and send messages.  
+In this case to play hangman!
+
+* Using pug as templating render engine to communicate with the browser.
 
 ## What's used
+* [Socket.io](https://socket.io/)
+* [Pug](https://pugjs.org/api/getting-started.html)
+
 
 ## To Do
+* Finishing the app, making the game real like hangman.
