@@ -6,7 +6,7 @@ A simple chat with hangman where you can play hangman in with others.
 # Table of Content
 - [Getting started](#getting-started)
 - [Features](#features)
-- [What's used](#what's-used)
+- [Whats used](#whats-used)
 - [To Do](#to-do)
 
 # Getting started
@@ -18,16 +18,15 @@ Here is how to get started:
 4. Go to **localhost:3100** and you are ready to go.
 
 # Features
-* socket.io is beeing used to make the app realtime.  
-You can now use the app to  talk with eachother and send messages.  
+* socket.io is being used to make the app realtime.  
+You can now use the app to talk with eachother and send messages.  
 In this case to play hangman!
 
 * Using pug as templating render engine to communicate with the browser.
 
-# What's used
+# Whats used
 * [Socket.io](https://socket.io/)
 * [Pug](https://pugjs.org/api/getting-started.html)
-
 
 # To Do
 * Finishing the app, making the game real like hangman.
