@@ -1,6 +1,8 @@
 # Hangman Chat
 A simple chat with hangman where you can play hangman in with others.
 
+![hangman gif](images/kev_app.gif)
+
 # Table of Content
 - [Getting started](#getting-started)
 - [](#)
